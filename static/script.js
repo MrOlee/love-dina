@@ -1,4 +1,3 @@
-```javascript
 // LOADING
 
 window.addEventListener("load",()=>{
@@ -14,11 +13,13 @@ window.addEventListener("load",()=>{
 
       loading.style.display = "none";
 
-    },1000);
+    },500);
 
-  },3500);
+  },1200);
 
 });
+```
+
 
 // SECRET PASSWORD
 
