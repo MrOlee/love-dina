@@ -39,7 +39,7 @@ function checkPassword(){
 
     shakeBox();
 
-    alert("Akses Ditolak 😌");
+    alert("Akses Ditolak,Karna kamu bukan adek 😌");
 
   }
 
@@ -85,7 +85,7 @@ function shakeBox(){
 // COUNTDOWN
 
 const startDate =
-  new Date("2024-01-01T00:00:00");
+  new Date("2025-11-01T00:00:00");
 
 function updateTimer(){
 
@@ -130,7 +130,7 @@ function showLove(){
 // TYPEWRITER
 
 const text =
-"💖 Aku Akan Selalu Menyayangimu Selamanya 💖";
+"💖 Abg Akan Selalu Menyayangi adek Selamanya 💖 Sehat Selalu Ya Kesayangan Abg";
 
 let i = 0;
 
