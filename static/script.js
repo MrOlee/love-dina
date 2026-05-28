@@ -1,6 +1,5 @@
-// =======================
+```javascript
 // LOADING
-// =======================
 
 window.addEventListener("load",()=>{
 
@@ -21,11 +20,8 @@ window.addEventListener("load",()=>{
 
 });
 
-// =======================
 // SECRET PASSWORD
-// =======================
 
-// PASSWORD ASLI = 01012024
 const secretPassword = "MDEwMTIwMjQ=";
 
 function checkPassword(){
@@ -33,8 +29,7 @@ function checkPassword(){
   const input =
     document.getElementById("passwordInput").value;
 
-  const encoded =
-    btoa(input);
+  const encoded = btoa(input);
 
   if(encoded === secretPassword){
 
@@ -50,9 +45,7 @@ function checkPassword(){
 
 }
 
-// =======================
-// UNLOCK WEBSITE
-// =======================
+// UNLOCK
 
 function unlockWebsite(){
 
@@ -68,15 +61,11 @@ function unlockWebsite(){
     document.getElementById("mainContent")
       .style.display = "block";
 
-    cinematicIntro();
-
   },1000);
 
 }
 
-// =======================
-// SHAKE EFFECT
-// =======================
+// SHAKE
 
 function shakeBox(){
 
@@ -93,20 +82,7 @@ function shakeBox(){
 
 }
 
-// =======================
-// CINEMATIC INTRO
-// =======================
-
-function cinematicIntro(){
-
-  document.body.style.animation =
-    "cinematic 2s ease";
-
-}
-
-// =======================
 // COUNTDOWN
-// =======================
 
 const startDate =
   new Date("2024-01-01T00:00:00");
@@ -131,7 +107,7 @@ function updateTimer(){
 
   document.getElementById("timer")
     .innerHTML =
-    `${days} Hari ${hours} Jam ${minutes} Menit ${seconds} Detik ❤️`;
+`${days} Hari ${hours} Jam ${minutes} Menit ${seconds} Detik ❤️`;
 
 }
 
@@ -139,9 +115,7 @@ setInterval(updateTimer,1000);
 
 updateTimer();
 
-// =======================
 // LOVE BUTTON
-// =======================
 
 function showLove(){
 
@@ -153,9 +127,7 @@ function showLove(){
 
 }
 
-// =======================
-// TYPEWRITER EFFECT
-// =======================
+// TYPEWRITER
 
 const text =
 "💖 Aku Akan Selalu Menyayangimu Selamanya 💖";
@@ -189,9 +161,7 @@ function typeWriter(){
 
 }
 
-// =======================
-// HEART EFFECT
-// =======================
+// HEARTS
 
 function createHearts(){
 
@@ -222,9 +192,7 @@ function createHearts(){
 
 }
 
-// =======================
 // FIREWORKS
-// =======================
 
 function fireworks(){
 
@@ -253,9 +221,7 @@ function fireworks(){
 
 }
 
-// =======================
-// AUTO SLIDESHOW
-// =======================
+// SLIDESHOW
 
 let slideIndex = 0;
 
@@ -286,3 +252,23 @@ function autoSlide(){
   setTimeout(autoSlide,3000);
 
 }
+
+// MUSIC
+
+const music =
+  document.getElementById("bgMusic");
+
+function toggleMusic(){
+
+  if(music.paused){
+
+    music.play();
+
+  }else{
+
+    music.pause();
+
+  }
+
+}
+```
