@@ -1,23 +1,21 @@
-// LOADING
+// FAST LOADING
 
 window.addEventListener("load",()=>{
 
+  const loading =
+    document.getElementById("loading-screen");
+
+  loading.style.opacity = "0";
+
   setTimeout(()=>{
 
-    const loading =
-      document.getElementById("loading-screen");
+    loading.style.display = "none";
 
-    loading.style.opacity = "0";
-
-    setTimeout(()=>{
-
-      loading.style.display = "none";
-
-    },5);
-
-  },1);
+  },250);
 
 });
+```
+
 
 // PASSWORD
 
