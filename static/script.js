@@ -18,19 +18,19 @@ window.addEventListener("load",()=>{
   },1200);
 
 });
-```
 
+// PASSWORD
 
-// SECRET PASSWORD
-
-const secretPassword = "MDEwMTIwMjQ=";
+const secretPassword =
+btoa("01-11-2025");
 
 function checkPassword(){
 
   const input =
     document.getElementById("passwordInput").value;
 
-  const encoded = btoa(input);
+  const encoded =
+    btoa(input);
 
   if(encoded === secretPassword){
 
@@ -40,7 +40,7 @@ function checkPassword(){
 
     shakeBox();
 
-    alert("Akses Ditolak,Karna kamu bukan adek 😌");
+    alert("Akses Ditolak, Karna kamu bukan andina 😌");
 
   }
 
@@ -86,7 +86,7 @@ function shakeBox(){
 // COUNTDOWN
 
 const startDate =
-  new Date("2025-11-01T00:00:00");
+new Date("2025-11-01T00:00:00");
 
 function updateTimer(){
 
@@ -95,19 +95,19 @@ function updateTimer(){
   const diff = now - startDate;
 
   const days =
-    Math.floor(diff/(1000*60*60*24));
+  Math.floor(diff/(1000*60*60*24));
 
   const hours =
-    Math.floor((diff/(1000*60*60))%24);
+  Math.floor((diff/(1000*60*60))%24);
 
   const minutes =
-    Math.floor((diff/(1000*60))%60);
+  Math.floor((diff/(1000*60))%60);
 
   const seconds =
-    Math.floor((diff/1000)%60);
+  Math.floor((diff/1000)%60);
 
   document.getElementById("timer")
-    .innerHTML =
+  .innerHTML =
 `${days} Hari ${hours} Jam ${minutes} Menit ${seconds} Detik ❤️`;
 
 }
@@ -131,14 +131,14 @@ function showLove(){
 // TYPEWRITER
 
 const text =
-"💖 Abg Akan Selalu Menyayangi adek Selamanya 💖 Sehat Selalu Ya Kesayangan Abg";
+"💖 abg Akan Selalu Menyayangi adek Selamanya 💖";
 
 let i = 0;
 
 function typeWriter(){
 
   const target =
-    document.getElementById("loveText");
+  document.getElementById("loveText");
 
   target.innerHTML = "";
 
@@ -169,17 +169,17 @@ function createHearts(){
   for(let i=0;i<40;i++){
 
     const heart =
-      document.createElement("div");
+    document.createElement("div");
 
     heart.innerHTML = "❤️";
 
     heart.classList.add("heart");
 
     heart.style.left =
-      Math.random()*100+"vw";
+    Math.random()*100+"vw";
 
     heart.style.fontSize =
-      Math.random()*20+20+"px";
+    Math.random()*20+20+"px";
 
     document.body.appendChild(heart);
 
@@ -200,15 +200,15 @@ function fireworks(){
   for(let i=0;i<50;i++){
 
     const fire =
-      document.createElement("div");
+    document.createElement("div");
 
     fire.classList.add("firework");
 
     fire.style.left =
-      Math.random()*100+"vw";
+    Math.random()*100+"vw";
 
     fire.style.top =
-      Math.random()*100+"vh";
+    Math.random()*100+"vh";
 
     document.body.appendChild(fire);
 
@@ -231,7 +231,7 @@ autoSlide();
 function autoSlide(){
 
   const slides =
-    document.querySelectorAll(".gallery img");
+  document.querySelectorAll(".gallery img");
 
   slides.forEach(slide=>{
 
@@ -248,7 +248,7 @@ function autoSlide(){
   }
 
   slides[slideIndex-1]
-    .style.display = "block";
+  .style.display = "block";
 
   setTimeout(autoSlide,3000);
 
@@ -257,7 +257,7 @@ function autoSlide(){
 // MUSIC
 
 const music =
-  document.getElementById("bgMusic");
+document.getElementById("bgMusic");
 
 function toggleMusic(){
 
