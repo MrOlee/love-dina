@@ -13,9 +13,9 @@ window.addEventListener("load",()=>{
 
       loading.style.display = "none";
 
-    },500);
+    },5);
 
-  },1200);
+  },1);
 
 });
 
