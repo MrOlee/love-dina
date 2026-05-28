@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Happy Birthday ❤️</title>
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <h1>🎂 Selamat Ulang Tahun Sayang ❤️</h1>
+
+    <p>
+      Terima kasih sudah hadir dalam hidupku ✨
+    </p>
+
+    <button onclick="showLove()">Klik Aku ❤️</button>
+
+    <div id="loveText"></div>
+
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
