@@ -49,7 +49,7 @@ body::before{
 
   background-size:50px 50px;
 
-  animation:particles 20s linear infinite;
+  animation:particles 1s linear infinite;
 
   z-index:-1;
 
@@ -74,7 +74,7 @@ body::before{
   justify-content:center;
   align-items:center;
 
-  animation:introFade 5s forwards;
+  animation:introFade 1s forwards;
 
 }
 
