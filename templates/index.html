@@ -1,3 +1,6 @@
+# templates/index.html
+
+```html
 <!DOCTYPE html>
 <html lang="id">
 
@@ -5,7 +8,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Happy Birthday Dina ❤️</title>
+  <title>Love Dina ❤️</title>
 
   <link rel="stylesheet"
     href="{{ url_for('static', filename='style.css') }}">
@@ -16,13 +19,43 @@
 
 <body>
 
-  <!-- VIDEO BACKGROUND -->
+  <!-- LOADING SCREEN -->
+  <div id="loading-screen">
+
+    <h1>Loading Love Story ❤️</h1>
+
+    <div class="loader"></div>
+
+  </div>
+
+  <!-- PASSWORD SCREEN -->
+  <div id="password-screen">
+
+    <div class="password-box">
+
+      <h1>🔒 Secret Love</h1>
+
+      <p>Masukkan tanggal jadian ❤️</p>
+
+      <input type="password"
+        id="passwordInput"
+        placeholder="01012024">
+
+      <button onclick="checkPassword()">
+        Masuk ❤️
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- VIDEO -->
   <video autoplay muted loop id="bg-video">
     <source src="{{ url_for('static', filename='bg.mp4') }}"
       type="video/mp4">
   </video>
 
-  <!-- DARK OVERLAY -->
+  <!-- OVERLAY -->
   <div class="overlay"></div>
 
   <!-- MUSIC -->
@@ -32,51 +65,85 @@
   </audio>
 
   <!-- MAIN -->
-  <div class="container">
+  <div class="main-content"
+    id="mainContent">
 
-    <img src="{{ url_for('static', filename='couple.jpeg') }}"
-      class="profile">
+    <div class="container">
 
-    <h1>🎂 Happy Birthday Dina ❤️</h1>
+      <!-- PROFILE -->
+      <img src="{{ url_for('static', filename='couple.jpeg') }}"
+        class="profile">
 
-    <p class="subtitle">
-      Terima kasih sudah hadir dan menjadi bagian terindah dalam hidupku ✨
-    </p>
+      <!-- TITLE -->
+      <h1 class="title">
+        🎂 Happy Birthday Dina ❤️
+      </h1>
 
-    <!-- COUNTDOWN -->
-    <div class="countdown-box">
-      <h2>💖 Lama Kita Bersama 💖</h2>
-      <div id="timer"></div>
-    </div>
-
-    <!-- LOVE LETTER -->
-    <div class="letter">
-      <h2>💌 Surat Untukmu</h2>
-
-      <p>
-        Aku mungkin tidak sempurna,
-        tapi aku akan selalu berusaha
-        menjadi alasan kamu tersenyum setiap hari ❤️
+      <p class="subtitle">
+        Terima kasih sudah hadir dan menjadi bagian
+        terindah dalam hidupku ✨
       </p>
+
+      <!-- COUNTDOWN -->
+      <div class="card">
+
+        <h2>⏳ Lama Kita Bersama</h2>
+
+        <div id="timer"></div>
+
+      </div>
+
+      <!-- LOVE LETTER -->
+      <div class="card">
+
+        <h2>💌 Surat Untukmu</h2>
+
+        <p class="letter">
+          Aku mungkin bukan orang sempurna,
+          tapi aku akan selalu berusaha
+          menjadi alasan kamu tersenyum setiap hari ❤️
+        </p>
+
+      </div>
+
+      <!-- GALLERY -->
+      <div class="card">
+
+        <h2>📸 Kenangan Kita</h2>
+
+        <div class="gallery">
+
+          <img src="{{ url_for('static', filename='photo1.jpeg') }}">
+
+          <img src="{{ url_for('static', filename='photo2.jpeg') }}">
+
+          <img src="{{ url_for('static', filename='photo3.jpeg') }}">
+
+        </div>
+
+      </div>
+
+      <!-- BUTTON -->
+      <button class="love-btn"
+        onclick="showLove()">
+
+        Klik Aku ❤️
+
+      </button>
+
+      <div id="loveText"></div>
+
+      <!-- QR -->
+      <div class="card">
+
+        <h2>📱 QR Love</h2>
+
+        <img src="{{ url_for('static', filename='qr.jpeg') }}"
+          class="qr">
+
+      </div>
+
     </div>
-
-    <!-- GALLERY -->
-    <div class="gallery">
-
-      <img src="{{ url_for('static', filename='photo1.jpeg') }}">
-
-      <img src="{{ url_for('static', filename='photo2.jpeg') }}">
-
-      <img src="{{ url_for('static', filename='photo3.jpeg') }}">
-
-    </div>
-
-    <!-- BUTTON -->
-    <button onclick="showLove()">
-      Klik Aku ❤️
-    </button>
-
-    <div id="loveText"></div>
 
   </div>
 
@@ -88,3 +155,4 @@
 </body>
 
 </html>
+```
