@@ -107,7 +107,6 @@ function showLove(){
 
 // TYPEWRITER
 
-```javascript
 const text =
 `💔
 
