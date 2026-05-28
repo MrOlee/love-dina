@@ -1,31 +1,90 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Happy Birthday ❤️</title>
+  <title>Happy Birthday Dina ❤️</title>
 
-  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
 
+  <!-- VIDEO BACKGROUND -->
+  <video autoplay muted loop id="bg-video">
+    <source src="{{ url_for('static', filename='bg.mp4') }}"
+      type="video/mp4">
+  </video>
+
+  <!-- DARK OVERLAY -->
+  <div class="overlay"></div>
+
+  <!-- MUSIC -->
+  <audio autoplay loop>
+    <source src="{{ url_for('static', filename='music.mp3') }}"
+      type="audio/mpeg">
+  </audio>
+
+  <!-- MAIN -->
   <div class="container">
 
-    <h1>🎂 Selamat Ulang Tahun Sayang ❤️</h1>
+    <img src="{{ url_for('static', filename='couple.jpeg') }}"
+      class="profile">
 
-    <p>
-      Terima kasih sudah hadir dalam hidupku ✨
+    <h1>🎂 Happy Birthday Dina ❤️</h1>
+
+    <p class="subtitle">
+      Terima kasih sudah hadir dan menjadi bagian terindah dalam hidupku ✨
     </p>
 
-    <button onclick="showLove()">Klik Aku ❤️</button>
+    <!-- COUNTDOWN -->
+    <div class="countdown-box">
+      <h2>💖 Lama Kita Bersama 💖</h2>
+      <div id="timer"></div>
+    </div>
+
+    <!-- LOVE LETTER -->
+    <div class="letter">
+      <h2>💌 Surat Untukmu</h2>
+
+      <p>
+        Aku mungkin tidak sempurna,
+        tapi aku akan selalu berusaha
+        menjadi alasan kamu tersenyum setiap hari ❤️
+      </p>
+    </div>
+
+    <!-- GALLERY -->
+    <div class="gallery">
+
+      <img src="{{ url_for('static', filename='photo1.jpeg') }}">
+
+      <img src="{{ url_for('static', filename='photo2.jpeg') }}">
+
+      <img src="{{ url_for('static', filename='photo3.jpeg') }}">
+
+    </div>
+
+    <!-- BUTTON -->
+    <button onclick="showLove()">
+      Klik Aku ❤️
+    </button>
 
     <div id="loveText"></div>
 
   </div>
 
+  <!-- HEARTS -->
+  <div class="hearts"></div>
+
   <script src="{{ url_for('static', filename='script.js') }}"></script>
 
 </body>
+
 </html>
