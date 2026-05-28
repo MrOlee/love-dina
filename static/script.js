@@ -1,7 +1,7 @@
 // PASSWORD
 
 const secretPassword =
-btoa("01-11-2025");
+btoa("01112025");
 
 function checkPassword(){
 
@@ -19,7 +19,7 @@ function checkPassword(){
 
     shakeBox();
 
-    alert("Password Salah 😌");
+    alert("Password Salah, kamu bukan dina! 😌");
 
   }
 
