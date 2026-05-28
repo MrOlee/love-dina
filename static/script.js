@@ -1,27 +1,41 @@
-// LOADING
+// =========================
+// LOADING SCREEN
+// =========================
 
-window.onload = () => {
+window.addEventListener("load", () => {
 
   setTimeout(() => {
 
-    document.getElementById("loading-screen")
-      .style.display = "none";
+    const loading =
+      document.getElementById("loading-screen");
 
-    document.getElementById("password-screen")
-      .style.display = "flex";
+    if(loading){
+
+      loading.style.opacity = "0";
+
+      setTimeout(() => {
+
+        loading.style.display = "none";
+
+      },1000);
+
+    }
 
   },3000);
 
-};
+});
 
+// =========================
 // PASSWORD
+// =========================
 
 function checkPassword(){
 
   const password =
     document.getElementById("passwordInput").value;
 
-  if(password === "070106"){
+  // GANTI PASSWORD DI SINI
+  if(password === "01012024"){
 
     document.getElementById("password-screen")
       .style.display = "none";
@@ -31,15 +45,18 @@ function checkPassword(){
 
   }else{
 
-    alert("Hmm... kamu bukan Adek 😌");
+    alert("Hmm... kamu bukan Dina 😌");
 
   }
 
 }
 
+// =========================
 // COUNTDOWN
+// =========================
 
-const startDate = new Date("2025-11-01");
+const startDate =
+  new Date("2024-01-01T00:00:00");
 
 function updateTimer(){
 
@@ -59,45 +76,70 @@ function updateTimer(){
   const seconds =
     Math.floor((diff / 1000) % 60);
 
-  document.getElementById("timer").innerHTML =
-    `${days} Hari ${hours} Jam ${minutes} Menit ${seconds} Detik ❤️`;
+  const timer =
+    document.getElementById("timer");
+
+  if(timer){
+
+    timer.innerHTML =
+      `${days} Hari ${hours} Jam ${minutes} Menit ${seconds} Detik ❤️`;
+
+  }
 
 }
 
 setInterval(updateTimer,1000);
 
+updateTimer();
+
+// =========================
 // LOVE BUTTON
+// =========================
 
 function showLove(){
 
-  document.getElementById("loveText").innerHTML =
-    "💖 Aku Akan Selalu Menyayangimu 💖";
+  const loveText =
+    document.getElementById("loveText");
 
-  fireworks();
+  loveText.innerHTML =
+    "💖 Aku Akan Selalu Menyayangimu 💖";
 
   createHearts();
 
+  fireworks();
+
 }
 
+// =========================
 // HEART EFFECT
+// =========================
 
 function createHearts(){
 
   for(let i=0;i<25;i++){
 
-    let heart = document.createElement("div");
+    const heart =
+      document.createElement("div");
 
     heart.innerHTML = "❤️";
 
     heart.style.position = "fixed";
-    heart.style.left = Math.random()*100+"vw";
+
+    heart.style.left =
+      Math.random()*100+"vw";
+
     heart.style.top = "100vh";
+
     heart.style.fontSize = "30px";
-    heart.style.animation = "float 4s linear";
+
+    heart.style.zIndex = "999";
+
+    heart.style.animation =
+      "float 4s linear";
 
     document.body.appendChild(heart);
 
-    setTimeout(()=>{
+    setTimeout(() => {
 
       heart.remove();
 
@@ -107,18 +149,25 @@ function createHearts(){
 
 }
 
+// =========================
 // FIREWORKS
+// =========================
 
 function fireworks(){
 
   for(let i=0;i<40;i++){
 
-    let fire = document.createElement("div");
+    const fire =
+      document.createElement("div");
 
     fire.style.position = "fixed";
+
     fire.style.width = "10px";
+
     fire.style.height = "10px";
+
     fire.style.borderRadius = "50%";
+
     fire.style.background = "pink";
 
     fire.style.left =
@@ -130,12 +179,29 @@ function fireworks(){
     fire.style.boxShadow =
       "0 0 20px pink";
 
-    fire.style.animation =
-      "boom 1s linear";
+    fire.style.zIndex = "999";
+
+    fire.animate([
+
+      {
+        transform:"scale(0)",
+        opacity:1
+      },
+
+      {
+        transform:"scale(4)",
+        opacity:0
+      }
+
+    ],{
+
+      duration:1000
+
+    });
 
     document.body.appendChild(fire);
 
-    setTimeout(()=>{
+    setTimeout(() => {
 
       fire.remove();
 
@@ -144,4 +210,3 @@ function fireworks(){
   }
 
 }
-```
