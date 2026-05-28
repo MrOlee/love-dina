@@ -1,59 +1,112 @@
-// =========================
-// LOADING SCREEN
-// =========================
+// =======================
+// LOADING
+// =======================
 
-window.addEventListener("load", () => {
+window.addEventListener("load",()=>{
 
-  setTimeout(() => {
+  setTimeout(()=>{
 
     const loading =
       document.getElementById("loading-screen");
 
-    if(loading){
+    loading.style.opacity = "0";
 
-      loading.style.opacity = "0";
+    setTimeout(()=>{
 
-      setTimeout(() => {
+      loading.style.display = "none";
 
-        loading.style.display = "none";
+    },1000);
 
-      },1000);
-
-    }
-
-  },3000);
+  },3500);
 
 });
 
-// =========================
-// PASSWORD
-// =========================
+// =======================
+// SECRET PASSWORD
+// =======================
+
+// PASSWORD ASLI = 01012024
+const secretPassword = "MDEwMTIwMjQ=";
 
 function checkPassword(){
 
-  const password =
+  const input =
     document.getElementById("passwordInput").value;
 
-  // GANTI PASSWORD DI SINI
-  if(password === "01012024"){
+  const encoded =
+    btoa(input);
 
-    document.getElementById("password-screen")
-      .style.display = "none";
+  if(encoded === secretPassword){
 
-    document.getElementById("mainContent")
-      .style.display = "block";
+    unlockWebsite();
 
   }else{
 
-    alert("Hmm... kamu bukan Dina 😌");
+    shakeBox();
+
+    alert("Akses Ditolak 😌");
 
   }
 
 }
 
-// =========================
+// =======================
+// UNLOCK WEBSITE
+// =======================
+
+function unlockWebsite(){
+
+  const screen =
+    document.getElementById("password-screen");
+
+  screen.style.opacity = "0";
+
+  setTimeout(()=>{
+
+    screen.style.display = "none";
+
+    document.getElementById("mainContent")
+      .style.display = "block";
+
+    cinematicIntro();
+
+  },1000);
+
+}
+
+// =======================
+// SHAKE EFFECT
+// =======================
+
+function shakeBox(){
+
+  const box =
+    document.querySelector(".password-box");
+
+  box.classList.add("shake");
+
+  setTimeout(()=>{
+
+    box.classList.remove("shake");
+
+  },500);
+
+}
+
+// =======================
+// CINEMATIC INTRO
+// =======================
+
+function cinematicIntro(){
+
+  document.body.style.animation =
+    "cinematic 2s ease";
+
+}
+
+// =======================
 // COUNTDOWN
-// =========================
+// =======================
 
 const startDate =
   new Date("2024-01-01T00:00:00");
@@ -65,26 +118,20 @@ function updateTimer(){
   const diff = now - startDate;
 
   const days =
-    Math.floor(diff / (1000*60*60*24));
+    Math.floor(diff/(1000*60*60*24));
 
   const hours =
-    Math.floor((diff / (1000*60*60)) % 24);
+    Math.floor((diff/(1000*60*60))%24);
 
   const minutes =
-    Math.floor((diff / (1000*60)) % 60);
+    Math.floor((diff/(1000*60))%60);
 
   const seconds =
-    Math.floor((diff / 1000) % 60);
+    Math.floor((diff/1000)%60);
 
-  const timer =
-    document.getElementById("timer");
-
-  if(timer){
-
-    timer.innerHTML =
-      `${days} Hari ${hours} Jam ${minutes} Menit ${seconds} Detik ❤️`;
-
-  }
+  document.getElementById("timer")
+    .innerHTML =
+    `${days} Hari ${hours} Jam ${minutes} Menit ${seconds} Detik ❤️`;
 
 }
 
@@ -92,17 +139,13 @@ setInterval(updateTimer,1000);
 
 updateTimer();
 
-// =========================
+// =======================
 // LOVE BUTTON
-// =========================
+// =======================
 
 function showLove(){
 
-  const loveText =
-    document.getElementById("loveText");
-
-  loveText.innerHTML =
-    "💖 Aku Akan Selalu Menyayangimu 💖";
+  typeWriter();
 
   createHearts();
 
@@ -110,65 +153,87 @@ function showLove(){
 
 }
 
-// =========================
+// =======================
+// TYPEWRITER EFFECT
+// =======================
+
+const text =
+"💖 Aku Akan Selalu Menyayangimu Selamanya 💖";
+
+let i = 0;
+
+function typeWriter(){
+
+  const target =
+    document.getElementById("loveText");
+
+  target.innerHTML = "";
+
+  i = 0;
+
+  const typing = setInterval(()=>{
+
+    if(i < text.length){
+
+      target.innerHTML += text.charAt(i);
+
+      i++;
+
+    }else{
+
+      clearInterval(typing);
+
+    }
+
+  },60);
+
+}
+
+// =======================
 // HEART EFFECT
-// =========================
+// =======================
 
 function createHearts(){
 
-  for(let i=0;i<25;i++){
+  for(let i=0;i<40;i++){
 
     const heart =
       document.createElement("div");
 
     heart.innerHTML = "❤️";
 
-    heart.style.position = "fixed";
+    heart.classList.add("heart");
 
     heart.style.left =
       Math.random()*100+"vw";
 
-    heart.style.top = "100vh";
-
-    heart.style.fontSize = "30px";
-
-    heart.style.zIndex = "999";
-
-    heart.style.animation =
-      "float 4s linear";
+    heart.style.fontSize =
+      Math.random()*20+20+"px";
 
     document.body.appendChild(heart);
 
-    setTimeout(() => {
+    setTimeout(()=>{
 
       heart.remove();
 
-    },4000);
+    },5000);
 
   }
 
 }
 
-// =========================
+// =======================
 // FIREWORKS
-// =========================
+// =======================
 
 function fireworks(){
 
-  for(let i=0;i<40;i++){
+  for(let i=0;i<50;i++){
 
     const fire =
       document.createElement("div");
 
-    fire.style.position = "fixed";
-
-    fire.style.width = "10px";
-
-    fire.style.height = "10px";
-
-    fire.style.borderRadius = "50%";
-
-    fire.style.background = "pink";
+    fire.classList.add("firework");
 
     fire.style.left =
       Math.random()*100+"vw";
@@ -176,37 +241,48 @@ function fireworks(){
     fire.style.top =
       Math.random()*100+"vh";
 
-    fire.style.boxShadow =
-      "0 0 20px pink";
-
-    fire.style.zIndex = "999";
-
-    fire.animate([
-
-      {
-        transform:"scale(0)",
-        opacity:1
-      },
-
-      {
-        transform:"scale(4)",
-        opacity:0
-      }
-
-    ],{
-
-      duration:1000
-
-    });
-
     document.body.appendChild(fire);
 
-    setTimeout(() => {
+    setTimeout(()=>{
 
       fire.remove();
 
     },1000);
 
   }
+
+}
+
+// =======================
+// AUTO SLIDESHOW
+// =======================
+
+let slideIndex = 0;
+
+autoSlide();
+
+function autoSlide(){
+
+  const slides =
+    document.querySelectorAll(".gallery img");
+
+  slides.forEach(slide=>{
+
+    slide.style.display = "none";
+
+  });
+
+  slideIndex++;
+
+  if(slideIndex > slides.length){
+
+    slideIndex = 1;
+
+  }
+
+  slides[slideIndex-1]
+    .style.display = "block";
+
+  setTimeout(autoSlide,3000);
 
 }
