@@ -647,3 +647,35 @@ body::before{
 
 }
 ```
+.loader{
+
+  width:80px;
+  height:80px;
+
+  border:4px solid rgba(255,255,255,0.1);
+
+  border-top:4px solid #ff4d88;
+
+  border-radius:50%;
+
+  animation:
+    spin 1s linear infinite,
+    glowLoader 2s infinite;
+
+}
+
+@keyframes glowLoader{
+
+  0%{
+    box-shadow:0 0 10px pink;
+  }
+
+  50%{
+    box-shadow:0 0 35px hotpink;
+  }
+
+  100%{
+    box-shadow:0 0 10px pink;
+  }
+
+}
