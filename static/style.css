@@ -283,3 +283,115 @@ body{
 
 }
 ```
+/* SHAKE */
+
+.shake{
+  animation:shake 0.5s;
+}
+
+@keyframes shake{
+
+  0%{transform:translateX(0);}
+  25%{transform:translateX(-10px);}
+  50%{transform:translateX(10px);}
+  75%{transform:translateX(-10px);}
+  100%{transform:translateX(0);}
+
+}
+
+/* HEART */
+
+.heart{
+  position:fixed;
+  top:100vh;
+  animation:floatUp 5s linear forwards;
+  z-index:999;
+}
+
+@keyframes floatUp{
+
+  from{
+    transform:translateY(0);
+    opacity:1;
+  }
+
+  to{
+    transform:translateY(-120vh);
+    opacity:0;
+  }
+
+}
+
+/* FIREWORK */
+
+.firework{
+  position:fixed;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  background:pink;
+  box-shadow:0 0 20px pink;
+  animation:boom 1s linear forwards;
+  z-index:999;
+}
+
+@keyframes boom{
+
+  from{
+    transform:scale(0);
+    opacity:1;
+  }
+
+  to{
+    transform:scale(5);
+    opacity:0;
+  }
+
+}
+
+/* CINEMATIC */
+
+@keyframes cinematic{
+
+  from{
+    filter:blur(15px);
+    opacity:0;
+  }
+
+  to{
+    filter:blur(0);
+    opacity:1;
+  }
+
+}
+
+/* GALLERY SLIDE */
+
+.gallery img{
+  display:none;
+  animation:fade 1s ease;
+}
+
+.gallery img:first-child{
+  display:block;
+}
+
+@keyframes fade{
+
+  from{
+    opacity:0;
+    transform:scale(1.1);
+  }
+
+  to{
+    opacity:1;
+    transform:scale(1);
+  }
+
+}
+
+/* LOADING */
+
+#loading-screen{
+  transition:1s;
+}
