@@ -11,7 +11,7 @@ window.addEventListener("load",()=>{
 
     loading.style.display = "none";
 
-  },250);
+  },1);
 
 });
 ```
