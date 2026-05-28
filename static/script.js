@@ -1,22 +1,3 @@
-// FAST LOADING
-
-window.addEventListener("load",()=>{
-
-  const loading =
-    document.getElementById("loading-screen");
-
-  loading.style.opacity = "0";
-
-  setTimeout(()=>{
-
-    loading.style.display = "none";
-
-  },1);
-
-});
-```
-
-
 // PASSWORD
 
 const secretPassword =
@@ -25,10 +6,10 @@ btoa("01-11-2025");
 function checkPassword(){
 
   const input =
-    document.getElementById("passwordInput").value;
+  document.getElementById("passwordInput").value;
 
   const encoded =
-    btoa(input);
+  btoa(input);
 
   if(encoded === secretPassword){
 
@@ -38,7 +19,7 @@ function checkPassword(){
 
     shakeBox();
 
-    alert("Akses Ditolak, Karna kamu bukan andina 😌");
+    alert("Password Salah 😌");
 
   }
 
@@ -49,7 +30,7 @@ function checkPassword(){
 function unlockWebsite(){
 
   const screen =
-    document.getElementById("password-screen");
+  document.getElementById("password-screen");
 
   screen.style.opacity = "0";
 
@@ -58,9 +39,9 @@ function unlockWebsite(){
     screen.style.display = "none";
 
     document.getElementById("mainContent")
-      .style.display = "block";
+    .style.display = "block";
 
-  },1000);
+  },400);
 
 }
 
@@ -69,7 +50,7 @@ function unlockWebsite(){
 function shakeBox(){
 
   const box =
-    document.querySelector(".password-box");
+  document.querySelector(".password-box");
 
   box.classList.add("shake");
 
@@ -81,7 +62,7 @@ function shakeBox(){
 
 }
 
-// COUNTDOWN
+// TIMER
 
 const startDate =
 new Date("2025-11-01T00:00:00");
@@ -122,14 +103,12 @@ function showLove(){
 
   createHearts();
 
-  fireworks();
-
 }
 
 // TYPEWRITER
 
 const text =
-"💖 abg Akan Selalu Menyayangi adek Selamanya 💖";
+"💖 Aku Akan Selalu Menyayangimu Selamanya 💖";
 
 let i = 0;
 
@@ -156,7 +135,7 @@ function typeWriter(){
 
     }
 
-  },60);
+  },50);
 
 }
 
@@ -164,7 +143,7 @@ function typeWriter(){
 
 function createHearts(){
 
-  for(let i=0;i<40;i++){
+  for(let i=0;i<20;i++){
 
     const heart =
     document.createElement("div");
@@ -185,36 +164,7 @@ function createHearts(){
 
       heart.remove();
 
-    },5000);
-
-  }
-
-}
-
-// FIREWORKS
-
-function fireworks(){
-
-  for(let i=0;i<50;i++){
-
-    const fire =
-    document.createElement("div");
-
-    fire.classList.add("firework");
-
-    fire.style.left =
-    Math.random()*100+"vw";
-
-    fire.style.top =
-    Math.random()*100+"vh";
-
-    document.body.appendChild(fire);
-
-    setTimeout(()=>{
-
-      fire.remove();
-
-    },1000);
+    },4000);
 
   }
 
@@ -248,7 +198,7 @@ function autoSlide(){
   slides[slideIndex-1]
   .style.display = "block";
 
-  setTimeout(autoSlide,3000);
+  setTimeout(autoSlide,2500);
 
 }
 
@@ -270,4 +220,3 @@ function toggleMusic(){
   }
 
 }
-```
