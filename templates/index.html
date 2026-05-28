@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="id">
 
@@ -9,7 +8,7 @@
   <meta name="viewport"
     content="width=device-width, initial-scale=1.0">
 
-  <title>Happy Birtsday Adek ❤️</title>
+  <title>Happy Birthday Adek❤️</title>
 
   <link rel="stylesheet"
     href="{{ url_for('static', filename='style.css') }}">
@@ -21,25 +20,29 @@
 
 <body>
 
-  <!-- CINEMATIC INTRO -->
+  <!-- INTRO -->
   <div id="cinematicIntro">
 
     <h1 class="intro-text">
       In a world full of people...
     </h1>
 
-    <h2 class="intro-sub">
-      I found you ❤️
-    </h2>
+    <h1 class="intro-sub">
+      I found you Adek❤️
+    </h1>
+
+    <h1 class="into-sub">
+      Andina Putri, S.Gz
+    </h1>
 
   </div>
 
   <!-- LOADING -->
   <div id="loading-screen">
 
-    <h1>Loading Love Story ❤️</h1>
-
     <div class="loader"></div>
+
+    <h1>Loading Love Story ❤️</h1>
 
   </div>
 
@@ -50,14 +53,18 @@
 
       <h1>🔒 Secret Love</h1>
 
-      <p>Masukkan tanggal jadian kita ❤️</p>
+      <p>
+        Masukkan tanggal spesial kita Sayang❤️
+      </p>
 
       <input type="password"
         id="passwordInput"
-        placeholder="••••••••">
+        placeholder="11-11-2025">
 
       <button onclick="checkPassword()">
+
         Masuk ❤️
+
       </button>
 
     </div>
@@ -76,14 +83,15 @@
   <div class="overlay"></div>
 
   <!-- MUSIC -->
-  <audio id="bgMusic" autoplay loop>
+  <audio id="bgMusic"
+    autoplay loop>
 
     <source src="{{ url_for('static', filename='music.mp3') }}"
       type="audio/mpeg">
 
   </audio>
 
-  <!-- MAIN CONTENT -->
+  <!-- MAIN -->
   <div class="main-content"
     id="mainContent">
 
@@ -95,13 +103,16 @@
 
       <!-- TITLE -->
       <h1 class="title">
-        Selamat Ulang Tahun Adek Sayang❤️
+
+        Happy Birthday My Love, Andina Putri ❤️
+
       </h1>
 
       <p class="subtitle">
-        Terima kasih sudah hadir
-        dan menjadi bagian terindah
-        dalam hidup abg ya adek ✨
+
+        Hay Adek,Terima kasih sudah hadir
+        dan menjadi alasan bahagia abg ✨
+
       </p>
 
       <!-- COUNTDOWN -->
@@ -116,15 +127,32 @@
       <!-- LETTER -->
       <div class="card">
 
-        <h2>💌 Surat Untuk Adek Tersayang</h2>
+        <h2>💌 Surat Untukmu</h2>
 
         <p class="letter">
-          Abg tau, mungkin abg bukan orang sempurna,
-          tapi abg akan selalu berusaha
-          menjadi alasan adek tersenyum
-          setiap hari ❤️
-        </p>
 
+Selamat Ulang Tahun Adek,Kesayangan nya abg.
+          Hari Ini Harusnya jadi hari paling bahagia buat adek, tapi entah kenapa abg malah ikut haru memikirkannya.❤️
+Tentang bagaimana adek sudah melewati begitu banyak hal sampai pada dititik ini.
+          tentang semua lelah yang udah adek lewati dan adek simpan sendiri, Semua tangis dan air mata yang mungkin tidak pernah adek ceritakan, dan semua perjuangan adek yang tidak terlihat di mata orang lain.
+
+          abg cuma mau adek tau, terimakasih karna adek masih mampu bertahan sampai hari ini yang sudah sejauh ini.
+          terimakasih kaerena adek masi kuat meski kadang dunia ga sebaik itu sama adek.
+          dan terimakasih adek tetap memilih tinggal bersama abg disini.
+
+          kalau suatu hari, hidup adek terasa terlalu berat buat adek, peluk kata kata dari abg ini baik baik.
+          adek pantas untuk di cintai dan disayangi sebesar apapun kekurangan yang adek miliki.
+          dan selama masih ada abg, abg akan selalu jadi rumah ternyaman untuk adek pulang sayang.
+
+          abg tau, mungkin abg bukan orang yang paling sempurna untuk adek dalam menemani hidup adek, tapi percayalah sayang.
+          abg selalu berusaha untuk jadiorang yang ga akan ninggalin adek dalam keadaan apapun meski dalam keadaan adek yang sulit sekali pun.
+
+          ya allah, di umur adek yang baru ini. hilangkan lah semua luka luka lama yang ada di hati adek dan perlahan sembuh.
+          hati adek jadi lebih tenang, dan semua doa baik yang diam diam adek simpan akan menemukan jalan nya untuk menjadi nyata.
+
+          sekali lagi, selamatulang tahun buat adek kesayangan abg Andina Putri.
+          jangan capek hidup ya sayang, karna abg masih ingin melihat senyum adek itu lebih lama lagi.
+        </p>
       </div>
 
       <!-- GALLERY -->
@@ -154,13 +182,10 @@
 
       <div id="loveText"></div>
 
-      <!-- QR -->
-      <div class="card">
+      <!-- FINAL -->
+      <div class="final-text">
 
-        <h2>📱 QR Love</h2>
-
-        <img src="{{ url_for('static', filename='qr.jpeg') }}"
-          class="qr">
+        Thank You For Existing ❤️
 
       </div>
 
@@ -168,11 +193,13 @@
 
   </div>
 
-  <!-- MUSIC CONTROL -->
+  <!-- MUSIC BUTTON -->
   <div class="music-control">
 
     <button onclick="toggleMusic()">
+
       🎵 Music
+
     </button>
 
   </div>
@@ -182,4 +209,3 @@
 </body>
 
 </html>
-```
