@@ -1,6 +1,3 @@
-# static/script.js
-
-```javascript
 // LOADING
 
 window.onload = () => {
