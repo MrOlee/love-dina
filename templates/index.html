@@ -21,7 +21,7 @@
 <body>
 
   <!-- INTRO -->
-  <div id="cinematicIntro">
+  <div id="intro">
 
     <h1 class="intro-text">
       In a world full of people...
@@ -31,18 +31,9 @@
       I found you Adek❤️
     </h1>
 
-    <h1 class="into-sub">
+    <h1 class="intro-name">
       Andina Putri, S.Gz
     </h1>
-
-  </div>
-
-  <!-- LOADING -->
-  <div id="loading-screen">
-
-    <div class="loader"></div>
-
-    <h1>Loading Love Story ❤️</h1>
 
   </div>
 
@@ -72,7 +63,7 @@
   </div>
 
   <!-- VIDEO -->
-  <video autoplay muted loop id="bg-video">
+  <video autoplay muted loop playsinline id="bg-video">
 
     <source src="{{ url_for('static', filename='bg.mp4') }}"
       type="video/mp4">
@@ -132,27 +123,30 @@
         <p class="letter">
 
 Selamat Ulang Tahun Adek,Kesayangan nya abg.
-          Hari Ini Harusnya jadi hari paling bahagia buat adek, tapi entah kenapa abg malah ikut haru memikirkannya.❤️
+Hari Ini Harusnya jadi hari paling bahagia buat adek, tapi entah kenapa abg malah ikut haru memikirkannya.❤️
+
 Tentang bagaimana adek sudah melewati begitu banyak hal sampai pada dititik ini.
-          tentang semua lelah yang udah adek lewati dan adek simpan sendiri, Semua tangis dan air mata yang mungkin tidak pernah adek ceritakan, dan semua perjuangan adek yang tidak terlihat di mata orang lain.
+tentang semua lelah yang udah adek lewati dan adek simpan sendiri, Semua tangis dan air mata yang mungkin tidak pernah adek ceritakan, dan semua perjuangan adek yang tidak terlihat di mata orang lain.
 
-          abg cuma mau adek tau, terimakasih karna adek masih mampu bertahan sampai hari ini yang sudah sejauh ini.
-          terimakasih kaerena adek masi kuat meski kadang dunia ga sebaik itu sama adek.
-          dan terimakasih adek tetap memilih tinggal bersama abg disini.
+abg cuma mau adek tau, terimakasih karna adek masih mampu bertahan sampai hari ini yang sudah sejauh ini.
+terimakasih kaerena adek masi kuat meski kadang dunia ga sebaik itu sama adek.
+dan terimakasih adek tetap memilih tinggal bersama abg disini.
 
-          kalau suatu hari, hidup adek terasa terlalu berat buat adek, peluk kata kata dari abg ini baik baik.
-          adek pantas untuk di cintai dan disayangi sebesar apapun kekurangan yang adek miliki.
-          dan selama masih ada abg, abg akan selalu jadi rumah ternyaman untuk adek pulang sayang.
+kalau suatu hari, hidup adek terasa terlalu berat buat adek, peluk kata kata dari abg ini baik baik.
+adek pantas untuk di cintai dan disayangi sebesar apapun kekurangan yang adek miliki.
+dan selama masih ada abg, abg akan selalu jadi rumah ternyaman untuk adek pulang sayang.
 
-          abg tau, mungkin abg bukan orang yang paling sempurna untuk adek dalam menemani hidup adek, tapi percayalah sayang.
-          abg selalu berusaha untuk jadiorang yang ga akan ninggalin adek dalam keadaan apapun meski dalam keadaan adek yang sulit sekali pun.
+abg tau, mungkin abg bukan orang yang paling sempurna untuk adek dalam menemani hidup adek, tapi percayalah sayang.
+abg selalu berusaha untuk jadiorang yang ga akan ninggalin adek dalam keadaan apapun meski dalam keadaan adek yang sulit sekali pun.
 
-          ya allah, di umur adek yang baru ini. hilangkan lah semua luka luka lama yang ada di hati adek dan perlahan sembuh.
-          hati adek jadi lebih tenang, dan semua doa baik yang diam diam adek simpan akan menemukan jalan nya untuk menjadi nyata.
+ya allah, di umur adek yang baru ini. hilangkan lah semua luka luka lama yang ada di hati adek dan perlahan sembuh.
+hati adek jadi lebih tenang, dan semua doa baik yang diam diam adek simpan akan menemukan jalan nya untuk menjadi nyata.
 
-          sekali lagi, selamatulang tahun buat adek kesayangan abg Andina Putri.
-          jangan capek hidup ya sayang, karna abg masih ingin melihat senyum adek itu lebih lama lagi.
+sekali lagi, selamatulang tahun buat adek kesayangan abg Andina Putri.
+jangan capek hidup ya sayang, karna abg masih ingin melihat senyum adek itu lebih lama lagi.
+
         </p>
+
       </div>
 
       <!-- GALLERY -->
@@ -198,7 +192,7 @@ Tentang bagaimana adek sudah melewati begitu banyak hal sampai pada dititik ini.
 
     <button onclick="toggleMusic()">
 
-      🎵 Music
+      🎵
 
     </button>
 
